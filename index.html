@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List App</title>
+    <script
+      src="https://kit.fontawesome.com/53fd9fa5b5.js"
+      crossorigin="anonymous"
+      async
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <!-- modal -->
+    <div class="wrapper modal-wrapper">
+      <div class="modal card">
+        <form class="edit-todo-form todo-item todo-item__selected">
+          <div class="input-wrap">
+            <input type="text" class="todo-input">
+          </div>
+          <button class="btn btn--close">
+            <i class="fa-solid fa-square-xmark"></i>
+          </button>
+          <button type="submit" class="btn btn--done">
+            <i class="fa-regular fa-square-check"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- todo -->
+    <div class="wrapper">
+      <div class="card">
+        <!--  -->
+        <div class="card__header">
+          <div class="card__title">
+            <h3>Todo List</h3>
+            <span class="todo__items-counter">
+              <span id="todo-completed-count">0</span>/<span id="todo-all-count">0</span>
+            </span>
+          </div>
+          <div class="flex flex-row">
+            <!-- <button id="change-language" class="btn btn--language">
+              <a href="./fa">پارسی</a>
+            </button> -->
+            <div class="filter">
+              <select name="filter-todos" id="filter">
+                <option value="all">All</option>
+                <option value="completed">Completed</option>
+                <option value="uncompleted">Uncompleted</option>
+              </select>
+              <i class="fa-solid fa-caret-down"></i>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <div class="card__content">
+
+          <form class="todo-form todo-item todo-item__selected">
+            <button class="btn">
+              <i class="fa-regular fa-square"></i>
+            </button>
+            <div class="input-wrap">
+              <input type="text" placeholder="New todo..." class="todo-input">
+            </div>
+            <button type="submit" class="btn">
+              <!-- <i class="fa-solid fa-plus"></i> -->
+              <i class="fa-regular fa-square-plus"></i>
+            </button>
+          </form>
+
+          <ul class="todo-items">
+            <!-- <li class="todo-item">
+              <button class="btn check-box">
+                <i class="fa-regular fa-square btn--unchecked"></i>
+                <i class="fa-regular fa-square-check btn--checked"></i>
+              </button>
+              <p class="todo-item__text todo-completed">text...</p>
+              <span class="todo-item__date badge">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>2024-02-01</span>
+              </span>
+              <button class="btn btn--remove">
+                <i class="fa-regular fa-square-minus"></i>
+              </button>
+            </li> -->
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
